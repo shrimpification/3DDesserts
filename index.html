@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHOCOLATE DELIGHTS - Premium Dessert Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="nav-left">
+            <a href="#">Cakes</a>
+            <a href="#">Cupcakes</a>
+            <a href="#">Collections</a>
+            <a href="#">Stores</a>
+            <a href="#">Explore</a>
+        </nav>
+        
+        <div class="logo">
+            <h1>CHOCOLATE DELIGHTS</h1>
+        </div>
+        
+        <div class="nav-right">
+            <span class="user-name">Monica R11</span>
+            <i class="fas fa-search"></i>
+            <i class="fas fa-user"></i>
+            <div class="cart">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Collection Filter Bar -->
+    <div class="filter-bar">
+        <button class="view-all">View all</button>
+        <div class="filter-options">
+            <a href="#" class="filter-item active">Premium Collection</a>
+            <a href="#" class="filter-item">Signature Collection</a>
+            <a href="#" class="filter-item">Best Sellers</a>
+            <a href="#" class="filter-item">New Arrivals</a>
+            <a href="#" class="filter-item">Seasonal</a>
+            <a href="#" class="filter-item">Gift Sets</a>
+            <a href="#" class="filter-item">Custom Orders</a>
+            <a href="#" class="filter-item">Vegan Options</a>
+            <a href="#" class="filter-item">Sugar-Free</a>
+            <a href="#" class="filter-item">Gifts</a>
+        </div>
+        <div class="filter-icon">
+            <span>Filter</span>
+            <i class="fas fa-filter"></i>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="collection-header">
+            <h2>PREMIUM CHOCOLATE DESSERT COLLECTION</h2>
+            <p>Our Premium Collection showcases artisanal chocolate desserts crafted with the finest ingredients. Each creation features exquisite flavors and elegant presentation that redefine modern dessert sophistication.</p>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid">
+            <div class="product-card" data-product='{"name":"Cherry Chocolate Roll","price":"$4500","description":"A decadent cherry chocolate roll featuring rich dark chocolate wrapped around sweet cherry filling. This artisanal dessert combines the perfect balance of tart cherries and smooth chocolate for an unforgettable taste experience.","features":["Dark chocolate coating","Sweet cherry filling","Artisanal craftsmanship","Premium ingredients"],"has3D":true,"modelPath":"./assets/cherry__chocolate__roll.glb"}'>
+                <div class="product-image product-3d-viewer" id="product-3d-viewer-1">
+                    <canvas id="three-canvas-1"></canvas>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Cherry Chocolate Roll</h3>
+                    <p class="product-price">$4500</p>
+                    <i class="far fa-bookmark bookmark-icon"></i>
+                </div>
+            </div>
+
+            <div class="product-card" data-product='{"name":"Artisan Chocolate Cupcake","price":"$8000","description":"A decadent chocolate cupcake topped with rich buttercream frosting and chocolate shavings. Made with organic cocoa and premium ingredients, this treat is perfect for any occasion.","features":["Organic cocoa","Buttercream frosting","Chocolate shavings","Freshly baked daily"],"has3D":true,"modelPath":"./assets/chocolate_cupcake.glb"}'>
+                <div class="product-image product-3d-viewer" id="product-3d-viewer-2">
+                    <canvas id="three-canvas-2"></canvas>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Artisan Chocolate Cupcake</h3>
+                    <p class="product-price">$8000</p>
+                    <i class="far fa-bookmark bookmark-icon"></i>
+                </div>
+            </div>
+
+            <div class="product-card" data-product='{"name":"Chocolate Swirl Milkshake","price":"$12000","description":"A creamy, indulgent chocolate milkshake with a beautiful swirl design. Made with premium ice cream and rich chocolate syrup, topped with whipped cream and chocolate drizzle.","features":["Premium ice cream","Rich chocolate syrup","Whipped cream topping","Large 16oz serving"],"has3D":true,"modelPath":"./assets/chocolate_swirl_milkshake.glb"}'>
+                <div class="product-image product-3d-viewer" id="product-3d-viewer-3">
+                    <canvas id="three-canvas-3"></canvas>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Chocolate Swirl Milkshake</h3>
+                    <p class="product-price">$12000</p>
+                    <i class="far fa-bookmark bookmark-icon"></i>
+                </div>
+            </div>
+
+            <div class="product-card" data-product='{"name":"Coppa Bugiarda","price":"$1500","description":"An Italian-inspired chocolate dessert featuring layers of rich chocolate mousse, crunchy praline, and velvety chocolate ganache. A sophisticated treat that combines texture and flavor perfectly.","features":["Italian-inspired recipe","Chocolate mousse layers","Praline crunch","Ganache topping"],"has3D":true,"modelPath":"./assets/coppa_bugiarda.glb"}'>
+                <div class="product-image product-3d-viewer" id="product-3d-viewer-4">
+                    <canvas id="three-canvas-4"></canvas>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Coppa Bugiarda</h3>
+                    <p class="product-price">$1500</p>
+                    <i class="far fa-bookmark bookmark-icon"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Product Modal -->
+    <div class="modal-overlay" id="product-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-image-section">
+                    <div class="modal-3d-viewer" id="modal-3d-viewer" style="display: none;">
+                        <canvas id="modal-three-canvas"></canvas>
+                    </div>
+                    <div class="modal-image-placeholder" id="modal-image-placeholder">
+                        <img id="modal-image" src="" alt="">
+                    </div>
+                </div>
+                <div class="modal-info-section">
+                    <h2 class="modal-product-name" id="modal-product-name"></h2>
+                    <p class="modal-product-price" id="modal-product-price"></p>
+                    <p class="modal-product-description" id="modal-product-description"></p>
+                    <div class="modal-features">
+                        <h3>Features</h3>
+                        <ul id="modal-features-list"></ul>
+                    </div>
+                    <div class="modal-actions">
+                        <button class="btn-add-to-cart">
+                            <i class="fas fa-shopping-bag"></i>
+                            Add to Cart
+                        </button>
+                        <button class="btn-wishlist">
+                            <i class="far fa-heart"></i>
+                            Add to Wishlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
+
