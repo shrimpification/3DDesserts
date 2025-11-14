@@ -176,6 +176,11 @@ function initModal3DViewer(modelPath) {
                 const scale = 2 / maxDim;
                 modalModel.scale.multiplyScalar(scale);
                 
+                // Lower the floral chocolate dessert model
+                if (modelPath.includes('flower-25.glb')) {
+                    modalModel.position.y -= 0.5; // Lower by 0.5 units
+                }
+                
                 modalScene.add(modalModel);
                 
                 const newBox = new THREE.Box3().setFromObject(modalModel);
@@ -318,6 +323,11 @@ function initProduct3DViewer(canvasId, containerId, modelPath) {
                 } else {
                     console.warn(`Model ${modelPath} has zero dimensions, using default scale`);
                     model.scale.set(1, 1, 1);
+                }
+                
+                // Lower the floral chocolate dessert model
+                if (modelPath.includes('flower-25.glb')) {
+                    model.position.y -= 0.5; // Lower by 0.5 units
                 }
                 
                 scene.add(model);
